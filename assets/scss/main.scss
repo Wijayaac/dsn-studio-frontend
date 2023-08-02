@@ -1,0 +1,32 @@
+@import "./../../node_modules/bootstrap/scss/bootstrap-grid.scss";
+
+// @import "./../../node_modules/swiper/swiper-bundle.min.css";
+
+// Includes
+@import "vendors/mq";
+// @import "inc/fonts";
+@import "inc/variables";
+@import "inc/reboot";
+@import "inc/utils";
+// @import "inc/typography";
+
+// Components
+// @import "components/section";
+@import "components/header";
+// @import "components/footer";
+// @import "components/banner";
+// @import "components/text-media";
+// @import "components/text-icon";
+// @import "components/overlay-image";
+// @import "components/highlight";
+// @import "components/full-image";
+// @import "components/accordion";
+// @import "components/slider";
+// @import "components/contact";
+// @import "components/error";
+
+@include mq($until: desktop) {
+	body {
+		background-color: red;
+	}
+}

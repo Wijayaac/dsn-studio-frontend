@@ -1,0 +1,168 @@
+// desktop size
+.heading {
+	font-weight: 700;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+
+	&--border {
+		position: relative;
+		padding-top: 18px;
+
+		&::before {
+			position: absolute;
+			content: "";
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 1.5px;
+			background-color: var(--border-color, $theme-white)
+		}
+	}
+
+	.sup {
+		font-size: 15px;
+		line-height: 24px;
+	}
+}
+
+span.sup {
+	vertical-align: top;
+}
+
+
+p,
+ul,
+a,
+label {
+	letter-spacing: 0.05em;
+	font-size: 14px;
+
+	@include mq($from: desktop) {
+		font-size: 18px;
+
+	}
+}
+
+p,
+ul {
+	line-height: 26px;
+	font-weight: $font-medium;
+	color: $theme-black;
+}
+
+a {
+	line-height: 21px;
+}
+
+h1,
+h2,
+h3,
+h4,
+.h1,
+.h2,
+.h3,
+.h4 {
+	color: $theme-black;
+	font-weight: $font-bold;
+}
+
+h1,
+.h1 {
+	font-size: 32px;
+	line-height: 37px;
+
+	@include mq($from: desktop) {
+		font-size: 52px;
+		line-height: 61px;
+	}
+}
+
+h2,
+.h2 {
+	font-size: 24px;
+	line-height: 28px;
+
+	@include mq($from: desktop) {
+		font-size: 37px;
+		line-height: 43px;
+	}
+}
+
+h3,
+.h3 {
+	font-size: 20px;
+	line-height: 23px;
+
+	@include mq($from: desktop) {
+		font-size: 23px;
+		line-height: 27px;
+	}
+}
+
+h4,
+.h4 {
+	font-size: 18px;
+	line-height: 21px;
+	letter-spacing: 0.2em;
+}
+
+.caption {
+	font-size: 12.5px;
+	line-height: 14px;
+	font-weight: 700;
+	letter-spacing: 0.2em;
+	color: var(--color, #000) !important;
+	margin-bottom: 13px;
+
+	@include mq($from: desktop) {
+		font-size: 17px;
+		line-height: 19.96px;
+
+	}
+}
+
+.cta {
+	font-weight: $font-bold;
+	font-size: 15px;
+	line-height: 17px;
+	padding: 13px 20px;
+	border-radius: 10px;
+	border: 1.5px solid transparent;
+	display: inline-block;
+	background-color: transparent;
+	transition: background-color 400ms ease;
+	cursor: pointer;
+
+	&:hover {
+		background-color: var(--hover-color);
+	}
+
+	@include mq($from: desktop) {
+		font-size: 23px;
+		line-height: 27px;
+
+	}
+
+	&--white {
+		border-color: $theme-white;
+		color: $theme-white;
+	}
+
+	&--green {
+		background-color: $theme-green;
+		border-color: $theme-green;
+		color: $theme-white;
+	}
+}
+
+.color-white {
+	--color: #FFF;
+	--border-color: #FFF;
+	--hover-color: #D9D9D940;
+}
+
+.color-green {
+	--color: #49ab95;
+	--border-color: #49ab95;
+	--hover-color: #3A907C;
+}
