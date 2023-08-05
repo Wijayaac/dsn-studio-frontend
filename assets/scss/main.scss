@@ -13,7 +13,7 @@
 // Components
 // @import "components/section";
 @import "components/header";
-// @import "components/footer";
+@import "components/footer";
 // @import "components/banner";
 // @import "components/text-media";
 // @import "components/text-icon";
@@ -24,9 +24,3 @@
 // @import "components/slider";
 // @import "components/contact";
 // @import "components/error";
-
-@include mq($until: desktop) {
-	body {
-		background-color: red;
-	}
-}

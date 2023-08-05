@@ -1,0 +1,25 @@
+.footer {
+    padding-top: 40px;
+
+    h4 {
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    li,
+    a {
+        font-size: 14px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    @include mq($until: desktop) {
+
+        .col {
+            min-width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+}
