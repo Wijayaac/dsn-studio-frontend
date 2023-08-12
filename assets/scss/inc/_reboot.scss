@@ -107,3 +107,10 @@ button {
 		border: none;
 	}
 }
+
+// Container Bootstrap
+.container {
+	@include mq($until: desktop) {
+		--bs-gutter-x: 2rem;
+	}
+}

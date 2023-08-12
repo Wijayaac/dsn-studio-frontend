@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   css: ["@/assets/scss/main.scss"],
   devtools: { enabled: true },
-  modules: ["@nuxtjs/google-fonts"],
+  modules: ["@nuxtjs/google-fonts", "@nuxt/image"],
   googleFonts: {
     families: {
       Poppins: [400, 500, 700],
