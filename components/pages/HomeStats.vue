@@ -29,7 +29,7 @@
                 <p>years guarantee</p>
               </div>
             </div>
-            <cta class="cta cta--black"> view our portfolio </cta>
+            <UICta class="cta cta--black"> view our portfolio </UICta>
           </div>
         </div>
       </div>
@@ -66,6 +66,10 @@
     h3,
     p {
       margin-bottom: 20px;
+    }
+    h3 {
+      font-size: 48px;
+      margin-top: 20px;
     }
   }
 }

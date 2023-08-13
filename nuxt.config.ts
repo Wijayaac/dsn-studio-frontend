@@ -8,4 +8,7 @@ export default defineNuxtConfig({
       Poppins: [400, 500, 700],
     },
   },
+  build: {
+    transpile: ["@yeger/vue-masonry-wall"],
+  },
 });

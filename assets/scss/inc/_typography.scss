@@ -147,6 +147,11 @@ h4,
 		color: $theme-white;
 	}
 
+	&--black {
+		border-color: $theme-black;
+		color: $theme-black;
+	}
+
 	&--green {
 		background-color: $theme-green;
 		border-color: $theme-green;
