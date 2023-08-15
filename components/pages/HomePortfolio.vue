@@ -1,4 +1,7 @@
 <script setup>
+import MasonryWall from "@yeger/vue-masonry-wall";
+
+const route = useRoute();
 const items = ref([
   {
     title: "Title",
@@ -71,7 +74,9 @@ const items = ref([
     category: "building",
   },
 ]);
+
 const portfolios = ref([]);
+const activeFilter = ref("");
 const categories = [
   "all",
   "model",
@@ -81,10 +86,9 @@ const categories = [
   "interior",
 ];
 
-const route = useRoute();
-
 const changeFilter = (category) => {
   addHashToLocation(category);
+  activeFilter.value = category;
   if (category === "all") {
     portfolios.value = items.value;
   } else {
@@ -101,12 +105,12 @@ function addHashToLocation(params) {
 }
 
 onMounted(() => {
-  let activeFilter = route.query.filter;
-  if (activeFilter !== "" && activeFilter !== "all") {
+  activeFilter.value = route.query.filter;
+  if (activeFilter.value && activeFilter.value !== "all") {
     return (portfolios.value = items.value.filter(
-      (item) => item.category === activeFilter
+      (item) => item.category === activeFilter.value
     ));
-  } else if (!portfolios.value.length || activeFilter === "all") {
+  } else if (portfolios.value.length === 0 || activeFilter.value === "all") {
     return (portfolios.value = items.value);
   }
 });
@@ -124,7 +128,10 @@ onMounted(() => {
           <div class="col-12 col-lg-6">
             <div class="portfolio-filter">
               <nav class="d-flex flex-wrap">
-                <li v-for="category in categories">
+                <li
+                  v-for="category in categories"
+                  :class="activeFilter === category ? 'active' : ''"
+                >
                   <button @click="changeFilter(category)">
                     {{ category }}
                   </button>
@@ -134,7 +141,8 @@ onMounted(() => {
           </div>
         </div>
       </div>
-      <masonry-wall
+      <MasonryWall
+        v-if="portfolios.length"
         :items="portfolios"
         :ssr-columns="2"
         :column-width="300"
@@ -153,7 +161,7 @@ onMounted(() => {
             </div>
           </div>
         </template>
-      </masonry-wall>
+      </MasonryWall>
     </div>
   </section>
 </template>
@@ -161,6 +169,10 @@ onMounted(() => {
 <style scoped lang="scss">
 .portfolio {
   padding: 100px 0;
+
+  @media screen and (max-width: 991px) {
+    padding: 60px 0;
+  }
   &-header {
     margin-bottom: 60px;
     padding-top: 20px;
@@ -170,13 +182,40 @@ onMounted(() => {
     .row {
       align-items: flex-end;
     }
+    @media screen and (max-width: 991px) {
+      text-align: center;
+      padding-top: 0;
+
+      h2 {
+        margin-bottom: 8px;
+      }
+    }
   }
   &-filter {
-    button {
-      text-transform: lowercase;
-    }
     nav {
       justify-content: flex-end;
+    }
+    li {
+      padding: 5px 10px;
+
+      &.active {
+        background-color: #000;
+        button {
+          color: #fff;
+        }
+      }
+    }
+    button {
+      text-transform: lowercase;
+      cursor: pointer;
+    }
+
+    @media screen and (max-width: 991px) {
+      margin-top: 20px;
+
+      nav {
+        justify-content: center;
+      }
     }
   }
   &-image {

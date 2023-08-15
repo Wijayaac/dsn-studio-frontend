@@ -1,5 +1,5 @@
 <template>
-  <header class="header">
+  <header class="header" ref="headRef">
     <div class="header__wrapper">
       <div class="header__logo-wrapper">
         <a href="/"
@@ -68,8 +68,27 @@ import { ref } from "vue";
 
 const primaryNav = ref<HTMLElement | null>(null);
 const isDrawerVisible = ref(false);
+const headRef = ref<HTMLElement | null>(null);
 
 const handleDrawer = () => {
   isDrawerVisible.value = !isDrawerVisible.value;
+  if (isDrawerVisible.value) {
+    document.body.classList.add("header-opened");
+  } else {
+    document.body.classList.remove("header-opened");
+  }
 };
+
+onMounted(() => {
+  var scroll = window.scrollY;
+  window.addEventListener("scroll", () => {
+    var curr = window.scrollY;
+    if (scroll > 50) {
+      headRef.value?.classList.add("scroll");
+    } else {
+      headRef.value?.classList.remove("scroll");
+    }
+    scroll = curr;
+  });
+});
 </script>

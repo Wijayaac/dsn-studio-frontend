@@ -42,8 +42,10 @@
   padding-bottom: 100px;
   position: relative;
 
-  @media screen and (max-width: 992px) {
+  @media screen and (max-width: 991px) {
     background-color: #fffbf5;
+    padding-top: 60px;
+    padding-bottom: 60px;
     .bg {
       display: none;
     }
@@ -54,12 +56,12 @@
     padding-top: 320px;
   }
   &-content {
-    max-width: 85%;
     margin-left: auto;
     margin-right: auto;
     padding-left: 40px;
     position: relative;
     z-index: 2;
+
     h2 {
       margin-bottom: 28px;
     }
@@ -70,6 +72,13 @@
     h3 {
       font-size: 48px;
       margin-top: 20px;
+    }
+    @media screen and (max-width: 991px) {
+      padding-left: 0;
+      padding-top: 20px;
+    }
+    @media screen and (min-width: 992px) {
+      max-width: 85%;
     }
   }
 }

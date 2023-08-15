@@ -31,6 +31,16 @@
     background-color: #fff;
     padding: 40px 70px;
     max-width: 80%;
+
+    @media screen and (max-width: 991px) {
+      max-width: 100%;
+      padding: 20px 25px;
+
+      h2,
+      p {
+        margin-bottom: 12px;
+      }
+    }
   }
 }
 </style>

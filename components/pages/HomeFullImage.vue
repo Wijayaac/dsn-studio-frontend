@@ -18,6 +18,10 @@ const props = defineProps({ caption: Boolean, label: String });
   height: 500px;
   display: flex;
   align-items: flex-end;
+
+  @media screen and (max-width: 991px) {
+    height: 320px;
+  }
   &-caption {
     position: relative;
     z-index: 2;

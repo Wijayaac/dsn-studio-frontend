@@ -1,22 +1,25 @@
+body.header-opened {
+	overflow-y: hidden;
+}
+
 .header {
-	position: sticky;
+	position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
 	z-index: 9999;
 	width: 100%;
 	height: $header-height;
-	background-color: #00000066;
-	transition: padding 400ms, 400ms ease;
+	background-color: transparent;
+	transition: background-color 400ms, 400ms ease;
 
 	@include mq($from: desktop) {
 		height: $header-desktop-height;
 	}
 
 
-	&.scroll,
-	.page--contact & {
-		background-color: $theme-black;
+	&.scroll {
+		background-color: #00000066;
 	}
 
 	&__wrapper {
@@ -76,10 +79,6 @@
 				left: 0;
 				transform: rotate(0deg);
 				transition: 0.25s ease-in-out;
-
-				.scroll & {
-					background: $theme-light;
-				}
 			}
 
 			&:nth-child(1) {
@@ -206,12 +205,16 @@
 
 	&__nav {
 		&-item {
-			color: $theme-black;
+			color: $theme-white;
 			position: relative;
 			z-index: 2;
 			font-size: 18px;
 			letter-spacing: 0.05em;
 			font-weight: 500;
+
+			@include mq($until: desktop) {
+				color: $theme-black;
+			}
 
 			&--primary {
 
@@ -235,7 +238,7 @@
 
 			.active & {
 				&::before {
-					background-color: $theme-orange;
+					background-color: $theme-white;
 					width: 100%;
 				}
 			}

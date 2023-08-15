@@ -75,5 +75,8 @@
         </div>
       </div>
     </div>
+    <div class="copyright">
+      <a href="http://wijayaac.netlify.app/" target="_blank">&copy;wijayaac</a>
+    </div>
   </footer>
 </template>
