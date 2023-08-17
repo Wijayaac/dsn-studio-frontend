@@ -3,7 +3,7 @@ const props = defineProps({ caption: Boolean, label: String });
 </script>
 <template>
   <section class="image">
-    <NuxtImg src="/img/full-image.jpg" class="img-full" />
+    <NuxtImg src="/img/full-image.jpg" class="img-full parallax" />
     <caption class="image-caption" v-if="caption">
       {{
         label
@@ -18,6 +18,7 @@ const props = defineProps({ caption: Boolean, label: String });
   height: 500px;
   display: flex;
   align-items: flex-end;
+  overflow: hidden;
 
   @media screen and (max-width: 991px) {
     height: 320px;

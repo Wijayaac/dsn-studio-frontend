@@ -10,22 +10,22 @@
         </div>
         <div class="col-lg-8">
           <div class="stat-content">
-            <h2>We Create Digital Experience</h2>
+            <h2 data-splitting>We Create Digital Experience</h2>
             <p class="bold">
               Located on King’s Road in the heart of chic and high-end Chelsea,
               we've designed the first Sticks 'N' Sushi restaurant in London.
             </p>
             <div class="row">
               <div class="col-4">
-                <h3>17+</h3>
+                <h3 data-splitting>17+</h3>
                 <p>years working in Canada</p>
               </div>
               <div class="col-4">
-                <h3>48</h3>
+                <h3 data-splitting>48</h3>
                 <p>Houses build in europe</p>
               </div>
               <div class="col-4">
-                <h3>100*</h3>
+                <h3 data-splitting>100*</h3>
                 <p>years guarantee</p>
               </div>
             </div>

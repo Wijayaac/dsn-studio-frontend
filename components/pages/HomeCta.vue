@@ -1,13 +1,15 @@
 <template>
   <section class="contact">
     <div class="contact-image">
-      <NuxtImg class="img-full" src="/img/cta.jpg" />
+      <NuxtImg class="img-full parallax" src="/img/cta.jpg" />
     </div>
     <div class="container">
       <div class="contact-content">
         <div class="row">
           <div class="col-lg-9 col-12">
-            <h2 class="h3">Take a look at how we designed this house</h2>
+            <h2 class="h3" data-splitting>
+              Take a look at how we designed this house
+            </h2>
             <p>Learn more about our great portfolios</p>
           </div>
           <div class="col-lg-3 col-12">
@@ -24,6 +26,7 @@
   height: 500px;
   display: flex;
   align-items: flex-end;
+  overflow: hidden;
 
   &-content {
     position: relative;

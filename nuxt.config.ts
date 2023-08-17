@@ -9,6 +9,6 @@ export default defineNuxtConfig({
     },
   },
   build: {
-    transpile: ["@yeger/vue-masonry-wall"],
+    transpile: ["@yeger/vue-masonry-wall", "gsap"],
   },
 });

@@ -2,11 +2,11 @@
   <section class="hero">
     <div class="hero-wrapper">
       <div class="hero-background">
-        <nuxt-img class="img-full" src="/img/hero.jpg" />
+        <nuxt-img class="img-full parallax" src="/img/hero.jpg" />
       </div>
       <div class="container">
         <div class="hero-content">
-          <h1>We designed your space for living</h1>
+          <h1 data-splitting>We designed your space for living</h1>
           <p>
             Great buildings that move the spirit have always been rare. In every
             case they are unique, poetic, products of the heart.
@@ -22,6 +22,7 @@
   min-height: 720px;
   height: 800px;
   position: relative;
+  overflow: hidden;
 
   &::before {
     position: absolute;

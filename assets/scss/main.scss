@@ -24,3 +24,12 @@
 // @import "components/slider";
 // @import "components/contact";
 // @import "components/error";
+
+.splitting {
+    overflow: hidden;
+
+    .word {
+        display: inline-block;
+        transform: translate(0, 100%)
+    }
+}

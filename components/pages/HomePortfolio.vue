@@ -122,7 +122,7 @@ onMounted(() => {
       <div class="portfolio-header">
         <div class="row">
           <div class="col-12 col-lg-6">
-            <h2>Portfolio</h2>
+            <h2 data-splitting>Portfolio</h2>
             <p>Featured works and selected works</p>
           </div>
           <div class="col-12 col-lg-6">
