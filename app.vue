@@ -32,11 +32,11 @@ onMounted(async () => {
       headings.forEach((heading) => {
         gsap.to(heading, {
           y: "0%",
-          delay: "5s",
+          delay: "3s",
           stagger: 0.15,
           scrollTrigger: {
             trigger: heading,
-            start: "150% bottom",
+            start: "bottom bottom",
             end: "top 50%",
           },
         });
@@ -44,10 +44,6 @@ onMounted(async () => {
     }, main.value);
   }
 });
-
-// onUnmounted(() => {
-//   ctx.revert();
-// });
 </script>
 <template>
   <div ref="main">

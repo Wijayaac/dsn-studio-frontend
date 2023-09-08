@@ -65,12 +65,10 @@
         <div class="col">
           <div class="footer-info">
             <h4>Philosophy</h4>
-            <ul>
-              <li><a href="#">Facebook</a></li>
-              <li><a href="#">Instagram</a></li>
-              <li><a href="#">Pinterest</a></li>
-              <li><a href="#">LinkedIn</a></li>
-            </ul>
+            <span>
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque,
+              ab?"
+            </span>
           </div>
         </div>
       </div>

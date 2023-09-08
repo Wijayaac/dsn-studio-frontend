@@ -1,45 +1,49 @@
 .footer {
-    padding-top: 40px;
+	padding-top: 40px;
 
-    &-container {
-        padding-bottom: 80px;
-    }
+	&-container {
+		padding-bottom: 80px;
+	}
 
-    h4 {
-        font-size: 16px;
-        font-weight: 500;
-    }
+	h4 {
+		font-size: 16px;
+		font-weight: 500;
+	}
 
-    li,
-    a {
-        font-size: 14px;
-    }
+	li,
+	a {
+		font-size: 14px;
+	}
 
-    p {
-        font-size: 16px;
-    }
+	p {
+		font-size: 16px;
+	}
 
-    @include mq($until: desktop) {
-        margin-bottom: 10px;
+	span {
+		font-size: 13px;
+	}
 
-        &-container {
-            padding-bottom: 20px;
-        }
+	@include mq($until: desktop) {
+		margin-bottom: 10px;
 
-        .col {
-            min-width: 50%;
-            margin-bottom: 20px;
-        }
-    }
+		&-container {
+			padding-bottom: 20px;
+		}
 
-    @include mq($until: 767px) {
-        .col {
-            min-width: 100%;
-            margin-bottom: 20px;
-        }
-    }
+		.col {
+			min-width: 50%;
+			margin-bottom: 20px;
+		}
+	}
 
-    .copyright {
-        text-align: center;
-    }
+	@include mq($until: 767px) {
+		.col {
+			min-width: 100%;
+			margin-bottom: 20px;
+		}
+	}
+
+	.copyright {
+		text-align: center;
+	}
 }
